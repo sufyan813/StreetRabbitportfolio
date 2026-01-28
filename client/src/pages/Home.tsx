@@ -215,7 +215,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className={getSectionAnimation("about")}>
               <div className="geometric-divider mb-8" />
-              <h2 className="mb-6">Muhammad Sufian</h2>
+              <h2 className="mb-6">Muhammad Su1234</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Street Rabbit Studio is a collective of bold creatives dedicated to pushing boundaries. We don't follow
                 trends—we set them. Every project is an opportunity to create something extraordinary.
