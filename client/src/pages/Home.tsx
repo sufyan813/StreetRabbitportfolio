@@ -3,6 +3,16 @@ import { ChevronRight, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Video, PenTool, Palette, Monitor,  } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
+import {
+  FaFilm,
+  FaBullseye,
+  FaPencilRuler,
+  FaCamera,
+  FaPaintBrush,
+  FaLightbulb,
+} from "react-icons/fa";
+
+import { SiAdobe, SiStoryblok } from "react-icons/si";
 
 
 /**
@@ -76,16 +86,17 @@ export default function Home() {
 ];
 
 
-  const skills = [
-    "Adobe Creative Suite",
-    "Motion Graphics",
-    "Brand Strategy",
-    "UI/UX Design",
-    "Photography Direction",
-    "Art Direction",
-    "Concept Development",
-    "Digital Storytelling",
-  ];
+ const skills = [
+  { label: "Adobe Creative Suite", icon: SiAdobe },
+  { label: "Motion Graphics", icon: FaFilm },
+  { label: "Brand Strategy", icon: FaBullseye },
+  { label: "UI/UX Design", icon: FaPencilRuler },
+  { label: "Photography Direction", icon: FaCamera },
+  { label: "Art Direction", icon: FaPaintBrush },
+  { label: "Concept Development", icon: FaLightbulb },
+  { label: "Digital Storytelling", icon: SiStoryblok },
+];
+
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -123,9 +134,9 @@ export default function Home() {
             <img
               src="/images/logo-rabbit.png"
               alt="Street Rabbit Logo"
-              className="w-8 h-8 animate-scale-in"
+              className="w-10 h-10 animate-scale-in"
             />
-            <span className="text-lg font-bold tracking-wider animate-slide-in-left">STREET RABBIT</span>
+            <span className="text-lg font-bold tracking-wider animate-slide-in-left"></span>
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a
@@ -386,17 +397,22 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className={`p-6 border border-gray-800 hover:border-pink-600/50 transition-all duration-500 group card-hover ${getSectionAnimation("skills", index)}`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-pink-600 mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300" />
-                  <p className="font-semibold tracking-wide">{skill}</p>
-                </div>
-              </div>
-            ))}
+          {skills.map(({ label, icon: Icon }, index) => (
+  <div
+    key={label}
+    className={`p-6 rounded-2xl border border-gray-800
+      hover:border-pink-600/50
+      transition-all duration-500
+      group card-hover
+      ${getSectionAnimation("skills", index)}`}
+  >
+    <div className="flex items-center gap-4">
+      <Icon className="w-5 h-5 text-pink-600 group-hover:scale-110 transition-transform duration-300" />
+      <p className="font-semibold tracking-wide">{label}</p>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
       </section>
