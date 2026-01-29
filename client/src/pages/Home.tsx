@@ -559,10 +559,10 @@ export default function Home() {
         </div>
       </div>
 
-  {/* RIGHT FORM */}
-<form
+  <form
   name="contact"
   method="POST"
+  action="/thank-you"
   data-netlify="true"
   netlify-honeypot="bot-field"
   className={`space-y-6 ${getSectionAnimation("contact")}`}
@@ -570,7 +570,7 @@ export default function Home() {
   {/* Netlify required hidden input */}
   <input type="hidden" name="form-name" value="contact" />
 
-  {/* Honeypot field */}
+  {/* Honeypot */}
   <input type="hidden" name="bot-field" />
 
   <input
