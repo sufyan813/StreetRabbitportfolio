@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Video, PenTool, Palette, Monitor } from "lucide-react";
+import { Video, PenTool, Palette, Monitor,  } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
+
+
 /**
  
  */
@@ -352,10 +355,18 @@ export default function Home() {
 
           {/* View All Button */}
           <div className={`text-center ${getSectionAnimation("portfolio")}`}>
-            <button className="btn-secondary premium-hover">
-              View Complete Portfolio
-              <ChevronRight className="inline ml-2 w-4 h-4" />
-            </button>
+  <a
+  href="https://www.instagram.com/street_rabbit_studio?igsh=MTVybm45ZWNhb25yZw=="
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-secondary premium-hover rounded-full inline-flex items-center justify-center"
+>
+  <FaInstagram className="w-4 h-4 mr-2 text-pink-500" />
+  View More Work
+  <ChevronRight className="inline ml-2 w-4 h-4" />
+</a>
+
+
           </div>
         </div>
       </section>
