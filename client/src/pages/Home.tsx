@@ -166,7 +166,7 @@ export default function Home() {
           </div>
 
           <h1 className="mb-6 leading-tight animate-fade-in-up animate-delay-200">
-            LOUD AS FUCK.
+            NOT LOUD.
             <br />
             <span className="text-pink-600">JUST RIGHT.</span>
           </h1>
