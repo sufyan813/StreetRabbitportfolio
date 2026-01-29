@@ -560,33 +560,51 @@ export default function Home() {
       </div>
 
       {/* RIGHT FORM */}
-      <div className={`space-y-6 ${getSectionAnimation("contact")}`}>
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
-        />
+<form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  className={`space-y-6 ${getSectionAnimation("contact")}`}
+>
+  {/* Netlify required hidden fields */}
+  <input type="hidden" name="form-name" value="contact" />
+  <input type="text" name="bot-field" hidden />
 
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
-        />
+  <input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    required
+    className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
+  />
 
-        <textarea
-          placeholder="Your Message"
-          rows={5}
-          className="w-full px-6 py-4 min-h-[160px] rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300 resize-none"
-        />
+  <input
+    type="email"
+    name="email"
+    placeholder="Your Email"
+    required
+    className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
+  />
 
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-6" />
+  <textarea
+    name="message"
+    placeholder="Your Message"
+    rows={5}
+    required
+    className="w-full px-6 py-4 min-h-[160px] rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300 resize-none"
+  />
 
-        <button
-          className="w-full py-4 rounded-xl bg-pink-600 text-white font-semibold tracking-wide hover:bg-pink-500 hover:shadow-[0_0_40px_rgba(255,20,147,0.45)] active:scale-[0.98] transition-all duration-300"
-        >
-          Send Message
-        </button>
-      </div>
+  <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-6" />
+
+  <button
+    type="submit"
+    className="w-full py-4 rounded-xl bg-pink-600 text-white font-semibold tracking-wide hover:bg-pink-500 hover:shadow-[0_0_40px_rgba(255,20,147,0.45)] active:scale-[0.98] transition-all duration-300"
+  >
+    Send Message
+  </button>
+</form>
+
     </div>
   </div>
 </section>
