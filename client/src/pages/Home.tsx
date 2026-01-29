@@ -60,6 +60,30 @@ export default function Home() {
       image: "/images/portfolio-websites.jpg",
       description: "Digital experiences that captivate",
     },
+     {
+      id: 4,
+      title: "babw",
+      image: "/images/LAHORE1.jpg",
+      description: "Bold visual identities and layouts",
+    },
+    {
+      id: 4,
+      title: "babw",
+      image: "/images/portfolio-design.jpg",
+      description: "Bold visual identities and layouts",
+    },
+    {
+      id: 4,
+      title: "babw",
+      image: "/images/portfolio-design.jpg",
+      description: "Bold visual identities and layouts",
+    },
+    {
+      id: 4,
+      title: "babw",
+      image: "/images/portfolio-design.jpg",
+      description: "Bold visual identities and layouts",
+    },
   ];
 
   const services = [
@@ -417,116 +441,213 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section
-        ref={(el) => {
-          if (el) sectionRefs.current["cta"] = el;
-        }}
-        id="cta"
-        className="section-spacing bg-black border-t border-gray-900"
+    {/* CTA Section */}
+<section
+  ref={(el) => {
+    if (el) sectionRefs.current["cta"] = el;
+  }}
+  id="cta"
+  className="relative section-spacing overflow-hidden border-t border-gray-900"
+>
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-40"
+    style={{ backgroundImage: "url('/images/creative-bg.jpg')" }}
+  />
+
+  {/* Dark + Pink Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-pink-900/30" />
+
+  {/* Content */}
+  <div className="container relative z-10">
+    {/* Floating Logo */}
+<img
+  src="/images/logobottom1.png"
+  alt="Street Rabbit"
+  className="
+    absolute top-50 right-50
+    w-50 h-50
+    opacity-80
+    animate-float
+    hover:opacity-100
+    hover:scale-105
+    transition-all duration-300
+    drop-shadow-[0_0_12px_rgba(255,20,147,0.5)]
+  "
+/>
+
+    <div
+  className={`relative p-16 md:p-24 border border-gray-800 rounded-3xl hover:shadow-[0_0_40px_rgba(255,20,147,0.15)]
+ ${getSectionAnimation(
+    "cta"
+  )}`}
+>
+
+      <div className="relative z-10 max-w-2xl">
+        <div className="geometric-divider mb-8" />
+        <h2 className="mb-6">Ready to Create Something Bold?</h2>
+        <p className="text-gray-300 mb-8 text-lg leading-relaxed">
+          Let's collaborate on your next project. We work with brands and creators
+          who demand excellence.
+        </p>
+       <button className="btn-primary premium-hover rounded-full px-8 py-4" >
+          Get In Touch
+          <ChevronRight className="inline ml-2 w-4 h-4" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+     {/* Contact Section */}
+<section
+  ref={(el) => {
+    if (el) sectionRefs.current["contact"] = el;
+  }}
+  id="contact"
+  className="section-spacing bg-gradient-to-b from-black via-black to-[#0a0a0a] border-t border-gray-900"
+>
+  <div className="container">
+    <div className="grid md:grid-cols-2 gap-16 items-start">
+
+      {/* LEFT INFO PANEL */}
+      <div
+        className={`relative p-10 rounded-2xl border border-gray-800 bg-black/60 backdrop-blur-sm ${getSectionAnimation(
+          "contact"
+        )}`}
       >
-        <div className="container">
-          <div className={`relative p-16 md:p-24 border border-gray-800 overflow-hidden ${getSectionAnimation("cta")}`}>
-            <div className="absolute inset-0 bg-gradient-to-r from-pink-600/10 to-transparent" />
-            <div className="relative z-10 max-w-2xl">
-              <div className="geometric-divider mb-8" />
-              <h2 className="mb-6">Ready to Create Something Bold?</h2>
-              <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                Let's collaborate on your next project. We work with brands and creators who demand excellence.
+        {/* subtle glow */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-pink-600/10 via-transparent to-transparent pointer-events-none" />
+
+        <div className="relative z-10">
+          <div className="geometric-divider mb-8" />
+          <h2 className="mb-10">Get In Touch</h2>
+
+          <div className="space-y-10">
+            <div>
+              <p className="text-xs text-gray-500 tracking-[0.3em] uppercase mb-2">
+                Email
               </p>
-              <button className="btn-primary premium-hover">
-                Get In Touch
-                <ChevronRight className="inline ml-2 w-4 h-4" />
-              </button>
+              <a
+                href="mailto:hello@streetrabbit.studio"
+                className="text-lg font-medium hover:text-pink-500 transition-colors"
+              >
+                suffsta8@gmail.com
+              </a>
+            </div>
+
+            <div>
+              <p className="text-xs text-gray-500 tracking-[0.3em] uppercase mb-2">
+                Phone
+              </p>
+              <a
+                href="tel:+1234567890"
+                className="text-lg font-medium hover:text-pink-500 transition-colors"
+              >
+                +92 (332) 7985588
+              </a>
+            </div>
+
+            <div>
+              <p className="text-xs text-gray-500 tracking-[0.3em] uppercase mb-2">
+                Location
+              </p>
+              <p className="text-lg font-medium">Islamabad,Pakistan</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Contact Section */}
-      <section
-        ref={(el) => {
-          if (el) sectionRefs.current["contact"] = el;
-        }}
-        id="contact"
-        className="section-spacing bg-black border-t border-gray-900"
-      >
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div className={getSectionAnimation("contact")}>
-              <div className="geometric-divider mb-8" />
-              <h2 className="mb-8">Get In Touch</h2>
-              <div className="space-y-8">
-                <div className="premium-hover">
-                  <p className="text-sm text-gray-400 mb-2 tracking-widest">EMAIL</p>
-                  <a
-                    href="mailto:hello@streetrabbit.studio"
-                    className="text-lg hover:text-pink-600 transition-colors duration-300"
-                  >
-                    hello@streetrabbit.studio
-                  </a>
-                </div>
-                <div className="premium-hover">
-                  <p className="text-sm text-gray-400 mb-2 tracking-widest">PHONE</p>
-                  <a
-                    href="tel:+1234567890"
-                    className="text-lg hover:text-pink-600 transition-colors duration-300"
-                  >
-                    +1 (234) 567-890
-                  </a>
-                </div>
-                <div className="premium-hover">
-                  <p className="text-sm text-gray-400 mb-2 tracking-widest">LOCATION</p>
-                  <p className="text-lg">New York, NY</p>
-                </div>
-              </div>
-            </div>
+      {/* RIGHT FORM */}
+      <div className={`space-y-6 ${getSectionAnimation("contact")}`}>
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
+        />
 
-            <div className={`space-y-6 ${getSectionAnimation("contact")}`}>
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full px-6 py-3 bg-gray-950 border border-gray-800 focus:border-pink-600 outline-none transition-colors duration-300"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="w-full px-6 py-3 bg-gray-950 border border-gray-800 focus:border-pink-600 outline-none transition-colors duration-300"
-              />
-              <textarea
-                placeholder="Your Message"
-                rows={5}
-                className="w-full px-6 py-3 bg-gray-950 border border-gray-800 focus:border-pink-600 outline-none transition-colors duration-300 resize-none"
-              />
-              <button className="btn-primary w-full premium-hover">Send Message</button>
-            </div>
-          </div>
-        </div>
-      </section>
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full px-6 py-4 rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300"
+        />
 
-      {/* Footer */}
-      <footer className="bg-black border-t border-gray-900 py-12">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex items-center gap-2">
-              <img src="/images/logo-rabbit.png" alt="Street Rabbit Logo" className="w-6 h-6" />
-              <span className="font-bold tracking-wider">STREET RABBIT STUDIO</span>
-            </div>
-            <p className="text-gray-400 text-sm">© 2026 Street Rabbit Studio. All rights reserved.</p>
-            <div className="flex gap-6">
-              <a href="#" className="text-gray-400 hover:text-pink-600 transition-colors duration-300 text-sm">
-                Instagram
-              </a>
-              <a href="#" className="text-gray-400 hover:text-pink-600 transition-colors duration-300 text-sm">
-                LinkedIn
-              </a>
-              <a href="#" className="text-gray-400 hover:text-pink-600 transition-colors duration-300 text-sm">
-                Twitter
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+        <textarea
+          placeholder="Your Message"
+          rows={5}
+          className="w-full px-6 py-4 min-h-[160px] rounded-xl bg-gradient-to-br from-[#050505] to-[#0b0b0b] border border-gray-800 text-white placeholder-gray-500 focus:border-pink-600 focus:ring-1 focus:ring-pink-600/30 outline-none transition-all duration-300 resize-none"
+        />
+
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent my-6" />
+
+        <button
+          className="w-full py-4 rounded-xl bg-pink-600 text-white font-semibold tracking-wide hover:bg-pink-500 hover:shadow-[0_0_40px_rgba(255,20,147,0.45)] active:scale-[0.98] transition-all duration-300"
+        >
+          Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+   {/* Footer */}
+<footer className="bg-black border-t border-gray-900 py-12">
+  <div className="container">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+
+      {/* Logo + Name */}
+      <div className="flex items-center gap-3">
+        <img
+          src="/images/logo-rabbit.png"
+          alt="Street Rabbit Logo"
+          className="w-7 h-7 opacity-90 animate-bounce [animation-duration:6s] [animation-timing-function:ease-in-out]"
+        />
+        <span className="font-bold tracking-wider">
+          STREET RABBIT STUDIO
+        </span>
+      </div>
+
+      {/* Copyright */}
+      <p className="text-gray-500 text-sm text-center">
+        © 2026 Street Rabbit Studio. All rights reserved.
+      </p>
+
+      {/* Social Links */}
+      <div className="flex gap-6">
+        <a
+          href="https://www.instagram.com/street_rabbit_studio?igsh=MTVybm45ZWNhb25yZw=="
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-pink-500 transition-colors duration-300 text-sm"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/street-rabbit-a24229296/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-pink-500 transition-colors duration-300 text-sm"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://twitter.com/streetrabbitco"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-pink-500 transition-colors duration-300 text-sm"
+        >
+          Twitter
+        </a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }

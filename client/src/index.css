@@ -342,3 +342,32 @@
 .animate-energy-sweep {
   animation: energy-sweep 6s ease-in-out infinite;
 }
+/* ===== Custom Scrollbar (Brand Styled) ===== */
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 20, 147, 0.4),
+    rgba(255, 20, 147, 0.8)
+  );
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 20, 147, 1);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 20, 147, 0.6) #0a0a0a;
+}
